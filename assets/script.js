@@ -105,5 +105,17 @@ var hour = moment().hour();
         document.querySelector('#five').classList.add('future')
     }
 
-
+    //local storage
+   var textInput = document.querySelector('#textInput')
+   function save () {
+       localStorage.setItem('input' , textInput.value)
+   }
+   var saveBtn=document.querySelector('#saveBtn')
+   saveBtn.addEventListener('click' , save)
+   var storedInput=localStorage.getItem('input')
+   if (storedInput){
+       textInput.textContent= storedInput
+   }
+   
+   
 
